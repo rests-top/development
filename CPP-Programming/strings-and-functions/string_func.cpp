@@ -14,6 +14,9 @@ int main()
     cout << "Please enter a phrase";
     string phrase;
     getline(std::cin, phrase);
+
+    cout << phrase;
+    
     
 
 
