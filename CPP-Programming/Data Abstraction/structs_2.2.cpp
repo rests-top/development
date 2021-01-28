@@ -1,5 +1,8 @@
 #include<iostream>
 #include<vector>
+#include<string>
+#include<cstdlib>
+
 using std::vector;
 using std::string;
 
@@ -35,6 +38,8 @@ int main()
     Deck my_deck;
     initialize(my_deck);
     print_deck(my_deck);
+    shuffle(my_deck);
+    print_deck(my_deck);
 };
 
 void initialize(Deck& deck)
@@ -64,3 +69,16 @@ void print_card(const Card& card)
     std::cout << "Rank = " << card.rank << "   "
         << "Suit = " << card.suit << '\n';
 };
+
+void shuffle(Deck& deck)
+{
+	Deck shuffled;
+	while (!deck.cards.empty())
+	{
+		size_t rand_index = rand() % deck.cards.size();
+		shuffled.cards.push_back(deck.cards[rand_index]);
+		deck.cards.erase(deck.cards.begin() + rand_index);
+	}
+	
+	deck = shuffled;
+}
