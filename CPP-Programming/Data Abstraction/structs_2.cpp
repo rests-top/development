@@ -37,22 +37,17 @@ int main()
 };
 
 void initialize(Deck& deck)
-{
-    for (int count = 0; count < deck.max_deck_size; count++)
+{    
+    Card card;
+    for (int suit = 0; suit < card.num_suits; suit++)
     {
-        Card card;
-        for (int suit = 0; suit < card.num_suits; suit++)
+        for (int rank = 0; rank < card.num_ranks; rank++)
         {
-            for (int rank = 0; rank < card.num_ranks; rank++)
-            {
-                card.suit = Suit(suit);
-                card.rank = Rank(rank);
-                deck.cards.push_back(card);
-            };
+            card.suit = Suit(suit);
+            card.rank = Rank(rank);
+            deck.cards.push_back(card);
         };
-        
     };
-
 };
 
 void print_deck(const Deck& deck)
@@ -66,5 +61,5 @@ void print_deck(const Deck& deck)
 void print_card(const Card& card)
 {
     std::cout << "Rank = " << card.rank << "   "
-        << "Suit = " << card.suit << 'n';
+        << "Suit = " << card.suit << '\n';
 };
