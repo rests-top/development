@@ -37,7 +37,7 @@ int main()
 };
 
 void initialize(Deck& deck)
-{    
+{
     Card card;
     for (int suit = 0; suit < card.num_suits; suit++)
     {
