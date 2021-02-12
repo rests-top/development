@@ -4,7 +4,7 @@ using std::vector;
 using std::string;
 
 enum Rank {ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
-enum Suit {SPADES, HESRTS, DIAMOND, CLUBS};
+enum Suit {SPADES, HEARTS, DIAMOND, CLUBS};
 
 struct Card{
 

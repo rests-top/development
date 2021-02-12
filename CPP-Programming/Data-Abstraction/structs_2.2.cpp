@@ -21,7 +21,6 @@ struct Card{
 struct Deck {
 
     vector<Card> cards;
-    string card_back; 
     int max_deck_size = 52;
 
 };
@@ -43,7 +42,7 @@ int main()
 };
 
 void initialize(Deck& deck)
-{    
+{
     Card card;
     for (int suit = 0; suit < card.num_suits; suit++)
     {
@@ -79,6 +78,6 @@ void shuffle(Deck& deck)
 		shuffled.cards.push_back(deck.cards[rand_index]);
 		deck.cards.erase(deck.cards.begin() + rand_index);
 	}
-	
+
 	deck = shuffled;
 }
